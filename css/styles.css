@@ -160,7 +160,9 @@ img {
       color: var(--secondary-color);
       transition: color var(--transition);
     }
-  
+        .active-nav {
+          color: var(--hover-focus);
+        }
     .item-list-menu>.link-menu:hover,
     .item-list-menu>.link-menu:focus {
       color: var(--hover-focus);
@@ -176,7 +178,6 @@ img {
       line-height: 1.11;
       letter-spacing: 0.02em;
       text-transform: capitalize;
-      color: var(--primary-color);
   
     }
   
@@ -468,6 +469,7 @@ screen and (min-resolution: 2dppx) and (min-width:1158px) {
         margin-right: auto;
         margin-left: auto;
         margin-top: 70px;
+        max-width: 1140px;
       }
       
       .hero-title {
@@ -516,6 +518,9 @@ screen and (min-resolution: 2dppx) and (min-width:1158px) {
 
 
 /*====section advantages==== */
+.text{
+  margin-bottom: 8px;
+}
 .subtitle {
   margin-bottom: 8px;
 }
@@ -536,20 +541,19 @@ screen and (min-resolution: 2dppx) and (min-width:1158px) {
 }
 .item-advantages{
   margin-bottom: 72px;
-}
-/* .subtitle {
-  margin-bottom: 8px;
-} */
+} 
 }
 @media screen and (min-width:768px) {
 .list-advantages {
+ 
   display: flex;
   flex-wrap:wrap;
   row-gap: 72px;
   column-gap: 24px;
 } 
  .item-advantages {
-   flex-basis: calc((100% - 1 * 24px) / 2);
+  margin: 0;
+  flex-basis: calc((100% - 1 * 24px) / 2);
   
 }
 }
@@ -579,7 +583,7 @@ screen and (min-resolution: 2dppx) and (min-width:1158px) {
 .text {
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 8px;
+ 
 }
 } 
 
@@ -703,6 +707,7 @@ transition: background-color var(--transition);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 72px;
   }
  }
@@ -711,11 +716,13 @@ transition: background-color var(--transition);
      display: flex;
      align-items: center;
      flex-wrap: wrap;
+     justify-content: center;
      row-gap: 64px;
      column-gap: 24px;
    }
 
    .list-team-item {
+    margin: 0;
      flex-basis: calc((100% - 1 * 24px) / 2);
  }
 }
@@ -740,8 +747,7 @@ transition: background-color var(--transition);
 }
 
 .link-customers{
-  margin: 0;
-max-width: 168px;
+width: 168px;
 height: 88px;
 display: flex;
 justify-content: center;
@@ -777,12 +783,15 @@ border-color: var(--hover-focus);
 .list-customers{
   
   display: flex;
+  align-items: center;
+  justify-content: center;
     flex-wrap: wrap;
     row-gap: 72px;
     column-gap: 16px;
   }
   
   .item-list-customers {
+    margin: 0;
     flex-basis: calc((100% - 16px) / 2);
   
   }
