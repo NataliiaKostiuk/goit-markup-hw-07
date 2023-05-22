@@ -111,6 +111,9 @@ img {
     .mobile-menu-container {
       position: relative;
       padding: 55px 11px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
   
     .mobile-close-btn {
@@ -147,10 +150,10 @@ img {
       fill: var(--primary-background);
     }
   
-    .item-list-menu {
+    .item-list-menu:not(:last-child) {
       margin-bottom: 40px;
     }
-  
+    
     .link-menu {
       font-weight: 700;
       font-size: 36px;
@@ -159,6 +162,7 @@ img {
       color: var(--secondary-color);
       transition: color var(--transition);
     }
+    
         .active-nav {
           color: var(--hover-focus);
         }
@@ -168,7 +172,7 @@ img {
     }
   
     .list-menu {
-      margin-bottom: 284px;
+      margin-bottom: auto;
     }
   
     .link-tel {
@@ -372,20 +376,52 @@ img {
 }
   
 /*==== hero==== */
+.hero {
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/mobal-photo/Dark-bg.jpg); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--secondary-color);
+  padding-top: 112px;
+  padding-bottom: 112px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 70px;
+  max-width: 1440px;
+}
+.hero-container {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.hero-button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  background: var(--button-color);
+  color: var(--primary-background);
+  cursor: pointer;
+  min-width: 169px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background: var(--hover-focus);
+}
 @media screen and (max-width:767px) {
-  .hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(../images/mobal-photo/Dark-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: var(--secondary-color);
-    padding-top: 112px;
-    padding-bottom: 112px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 70px;
-  }
+  
   .hero-title {
     font-weight: 700;
     font-size: 36px;
@@ -401,29 +437,20 @@ img {
     margin-bottom: 72px;
   }
 }
-@media screen and (min-device-pixel-ratio) and (min-width:428px),
-       screen and (min-resolution: 192dpi) and (min-width:428px),
-       screen and (min-resolution: 2dppx) and (min-width:428px) {
-  hero{
+@media screen and (min-device-pixel-ratio) and (max-width:767px),
+       screen and (min-resolution: 192dpi) and (max-width:767px),
+       screen and (min-resolution: 2dppx) and (max-width:767px) {
+  .hero{
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/mobal-photo/Dark-bg@2x.jpg);
   }
 }
 @media screen and (min-width:768px) {
-  .hero {
+   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/tablet-photo/background-tab.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      background-color: var(--secondary-color); 
-      padding-top: 112px;
-      padding-bottom: 112px;
-      margin-right: auto;
-      margin-left: auto; 
-      margin-top: 70px;
-  }
-    .hero-title {
+   }
+    .hero-title { 
     font-weight: 700;
       font-size: 56px;
       line-height: 1.07;
@@ -458,17 +485,9 @@ screen and (min-resolution: 192dpi) and (min-width:1158px),
 screen and (min-resolution: 2dppx) and (min-width:1158px) {
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(../images/desk-top-photo/people-office\ @2x.jpg);
-      background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-color: var(--secondary-color);
+      url(../images/desk-top-photo/people-office\ @2x.jpg); 
         padding-top: 188px;
         padding-bottom: 188px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 70px;
-        max-width: 1140px;
       }
       
       .hero-title {
@@ -485,36 +504,6 @@ screen and (min-resolution: 2dppx) and (min-width:1158px) {
         margin-bottom: 48px;
   }
 }
-
-.hero-container {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-.hero-button {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  background: var(--button-color);
-  color: var(--primary-background);
-  cursor: pointer;
-  min-width: 169px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 16px 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.hero-button:hover,
-.hero-button:focus {
-  background: var(--hover-focus);
-}
-
 
 /*====section advantages==== */
 .text{
@@ -796,6 +785,11 @@ border-color: var(--hover-focus);
   }
 
 }
+@media screen and (min-width:768px) and (max-width:1157px) {
+  .customers-container {
+      max-width: 584px;
+    }
+}
  @media screen and (min-width:768px) {
    .list-customers {
      display: flex;
@@ -956,7 +950,7 @@ border-color: var(--hover-focus);
     margin-bottom: auto;
    }
 }
-@media screen and (min-width:768px) {
+@media  screen and (min-width:768px) and (max-width:1157px) {
 .container-footer {
     display: flex;
     align-items: baseline;
@@ -964,6 +958,8 @@ border-color: var(--hover-focus);
     row-gap: 72px;
     column-gap: 24px;
   }
+}
+@media screen and (min-width:768px) {
   .logo-footer{
     width: 264px;
   }
@@ -987,7 +983,7 @@ border-color: var(--hover-focus);
    .container-footer {
     display: flex;
     align-items: baseline;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; 
   }
   .logo-footer {
     margin-right: 120px;
