@@ -390,6 +390,12 @@ img {
   margin-top: 70px;
   max-width: 1440px;
 }
+@media screen and (min-width:1158px) {
+  .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+}
 .hero-container {
   margin-left: auto;
   margin-right: auto;
@@ -485,9 +491,7 @@ screen and (min-resolution: 192dpi) and (min-width:1158px),
 screen and (min-resolution: 2dppx) and (min-width:1158px) {
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(../images/desk-top-photo/people-office\ @2x.jpg); 
-        padding-top: 188px;
-        padding-bottom: 188px;
+      url(../images/desk-top-photo/people-office\ @2x.jpg);   
       }
       
       .hero-title {
@@ -779,9 +783,7 @@ border-color: var(--hover-focus);
   }
   
   .item-list-customers {
-    
     flex-basis: calc((100% - 16px) / 2);
-  
   }
 
 }
@@ -802,7 +804,6 @@ border-color: var(--hover-focus);
      flex-basis: calc((100% - 2 * 24px) / 3);
 
    }
-
  }
 @media screen and (min-width:1158px) {
   .list-customers {
@@ -957,6 +958,7 @@ border-color: var(--hover-focus);
     flex-wrap: wrap;
     row-gap: 72px;
     column-gap: 24px;
+    max-width: 584px;
   }
 }
 @media screen and (min-width:768px) {
