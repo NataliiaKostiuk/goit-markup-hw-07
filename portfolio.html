@@ -42,6 +42,16 @@
             </li>
           </ul>
         </nav>
+        <button
+          class="modal-open-btn js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="modal-open-btn-icon" width="32" height="32">
+            <use href="./images/icons.svg#burger-icon"></use>
+          </svg>
+        </button>
         <address class="address">
           <ul class="list list-contact">
             <li class="item-contact">
@@ -56,6 +66,70 @@
             </li>
           </ul>
         </address>
+            <div class="mobile-menu js-menu-container" id="mobile-menu">
+          <div class="container mobile-menu-container">
+            <button class="mobile-close-btn js-close-menu">
+              <svg class="mobile-close-btn-icon" width="8" height="8">
+                <use href="./images/icons.svg#vector-modal"></use>
+              </svg>
+            </button>
+            <ul class="list list-menu">
+              <li class="item-list-menu">
+                <a class="link link-menu active-nav" href="./index.html">Studio</a>
+              </li>
+              <li class="item-list-menu">
+                <a class="link link-menu" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="item-list-menu">
+                <a class="link link-menu" href="">Contacts</a>
+              </li>
+            </ul>
+            <ul class="list contacts">
+              <li class="item-contacts-tel">
+                <a class="link link-contact link-tel active-nav" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="item-contacts">
+                <a
+                  class="link link-contact link-email"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="list mobile-social-list">
+              <li class="mobile-social-list-item">
+                <a class="mobile-social-link" href="">
+                  <svg class="mobile-icon-social-link" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-social-list-item">
+                <a class="mobile-social-link" href="">
+                  <svg class="mobile-icon-social-link" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-social-list-item">
+                <a class="mobile-social-link" href="">
+                  <svg class="mobile-icon-social-link" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-social-list-item">
+                <a class="mobile-social-link" href="">
+                  <svg class="mobile-icon-social-link" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -64,7 +138,7 @@
         <div class="container">
           <h1 hidden>Portfolio</h1>
 
-          <ul class="list list-button">
+          <ul class="list list-button button-container">
             <li class="item-button">
               <button class="button-portfolio" type="button">All</button>
             </li>
@@ -88,6 +162,10 @@
               <a class="link link-portfolio" href="">
                 <div class="card-wrap">
                   <img
+                   srcset="
+                  ./images/portfolio-photo/add.jpg 1x,
+                  ./images/portfolio-photo/add@2x.jpg 2x
+                "
                     src="./images/portfolio-photo/add.jpg"
                     alt="picture"
                     width="360"
@@ -110,6 +188,10 @@
               <a class="link link-portfolio" href="">
                 <div class="card-wrap">
                   <img
+                   srcset="
+                  ./images/portfolio-photo/cachless-pay.jpg 1x,
+                  ./images/portfolio-photo/cachless-pay@2x.jpg 2x
+                "
                     src="./images/portfolio-photo/cachless-pay.jpg"
                     alt="picture"
                     width="360"
@@ -132,6 +214,10 @@
               <a class="link link-portfolio" href="">
                 <div class="card-wrap">
                   <img
+                   srcset="
+                  ./images/portfolio-photo/meditations.jpg 1x,
+                  ./images/portfolio-photo/meditations@2x.jpg 2x
+                "
                     src="./images/portfolio-photo/meditations.jpg"
                     alt="picture"
                     width="360"
@@ -154,6 +240,10 @@
               <a class="link link-portfolio" href="">
                 <div class="card-wrap">
                   <img
+                   srcset="
+                  ./images/portfolio-photo/taxi.jpg 1x,
+                  ./images/portfolio-photo/taxi@2x.jpg 2x
+                "
                     src="./images/portfolio-photo/taxi.jpg"
                     alt="picture"
                     width="360"
@@ -176,6 +266,10 @@
               <a class="link link-portfolio" href="">
                 <div class="card-wrap">
                   <img
+                   srcset="
+                  ./images/portfolio-photo/illustrations.jpg 1x,
+                  ./images/portfolio-photo/illustrations@2x.jpg 2x
+                "
                     src="./images/portfolio-photo/illustrations.jpg"
                     alt="picture"
                     width="360"
@@ -198,6 +292,10 @@
               <a class="link link-portfolio" href="">
                 <div class="card-wrap">
                   <img
+                   srcset="
+                  ./images/portfolio-photo/online-courses.jpg 1x,
+                  ./images/portfolio-photo/online-courses@2x.jpg 2x
+                "
                     src="./images/portfolio-photo/online-courses.jpg"
                     alt="picture"
                     width="360"
@@ -220,6 +318,10 @@
               <a class="link link-portfolio" href="">
                 <div class="card-wrap">
                   <img
+                   srcset="
+                  ./images/portfolio-photo/instagram.jpg 1x,
+                  ./images/portfolio-photo/instagram@2x.jpg 2x
+                "
                     src="./images/portfolio-photo/instagram.jpg"
                     alt="picture"
                     width="360"
@@ -242,6 +344,10 @@
               <a class="link link-portfolio" href="">
                 <div class="card-wrap">
                   <img
+                   srcset="
+                  ./images/portfolio-photo/organic-food.jpg 1x,
+                  ./images/portfolio-photo/organic-food@2x.jpg 2x
+                "
                     src="./images/portfolio-photo/organic-food.jpg"
                     alt="picture"
                     width="360"
@@ -263,6 +369,10 @@
               <a class="link link-portfolio" href="">
                 <div class="card-wrap">
                   <img
+                   srcset="
+                  ./images/portfolio-photo/coffee.jpg 1x,
+                  ./images/portfolio-photo/coffee@2x.jpg 2x
+                "
                     src="./images/portfolio-photo/coffee.jpg"
                     alt="picture"
                     width="360"
@@ -351,5 +461,6 @@
         </form>
       </div>
     </footer>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

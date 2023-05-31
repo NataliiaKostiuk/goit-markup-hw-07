@@ -1001,6 +1001,7 @@ border-color: var(--hover-focus);
 
 
 /* ====portfolio==== */
+
 .button-portfolio {
   font-family: "Roboto", sans-serif;
   background: var(--secondary-background);
@@ -1033,9 +1034,10 @@ border-color: var(--hover-focus);
 .list-button {
   display: flex;
   gap: 24px;
-  justify-content: center;
+  /* justify-content: center; */
   margin-bottom: 72px;
-}
+} 
+
 .text-portfolio {
   color: var(--primary-color);
 }
@@ -1044,6 +1046,18 @@ border-color: var(--hover-focus);
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
+}
+@media screen and (max-width:767px){
+ .button-container{
+  max-width:263px;
+  flex-wrap:wrap;
+ } 
+.list-portfolio {
+  display: flex;
+  flex-direction:column;
+  
+
+}
 }
 .item-list-portfolio {
   width: calc((100% - 48px) / 3);
